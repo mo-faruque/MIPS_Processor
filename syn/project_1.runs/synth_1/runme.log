@@ -14,124 +14,106 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 474.559 ; gain = 201.738
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 473.836 ; gain = 197.469
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/write/Downloads/MIPS_Project/syn/project_1'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/write/Downloads/MIPS_Project/syn/project_1' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/write/Downloads/MIPS_Project/syn/project_1/project_1.runs/synth_1'.)
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/write/Downloads/MIPS_Project/syn'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/write/Downloads/MIPS_Project/syn' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/write/Downloads/MIPS_Project/syn/project_1.runs/synth_1'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental C:/Users/write/Downloads/MIPS_Project/syn/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/write/Downloads/MIPS_Project/syn/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/write/Downloads/MIPS_Project/syn/project_1.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/write/Downloads/MIPS_Project/syn/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3004
+INFO: [Synth 8-7075] Helper process launched with PID 18676
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 921.645 ; gain = 406.344
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 922.594 ; gain = 410.484
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:52]
-INFO: [Synth 8-3876] $readmem data file 'inst_data.mem' is read successfully [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:375]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:52]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:52]
+INFO: [Synth 8-3876] $readmem data file 'inst_data.mem' is read successfully [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:375]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:52]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1120.016 ; gain = 604.715
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1119.234 ; gain = 607.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.016 ; gain = 604.715
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1119.234 ; gain = 607.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.016 ; gain = 604.715
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1119.234 ; gain = 607.125
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+WARNING: [Synth 8-327] inferring latch for variable 'dout_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:216]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[15]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[14]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[13]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[12]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[11]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[10]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[9]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[8]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[7]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[6]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[5]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[4]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[3]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[2]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[1]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[0]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'IR_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'stop_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[31]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[30]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[29]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[28]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[27]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[26]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[25]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[24]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[23]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[22]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[21]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[20]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[19]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[18]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[17]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[16]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[15]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[14]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[13]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[12]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[11]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[10]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[9]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[8]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[7]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[6]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[5]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[4]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[3]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[2]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[1]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[0]' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_reg_rep' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:446]
+WARNING: [Synth 8-327] inferring latch for variable 'SGPR_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'jmp_flag_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:88]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:446]
+WARNING: [Synth 8-327] inferring latch for variable 'carry_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:232]
+WARNING: [Synth 8-327] inferring latch for variable 'sign_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:239]
+WARNING: [Synth 8-327] inferring latch for variable 'zero_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:246]
+WARNING: [Synth 8-327] inferring latch for variable 'overflow_reg' [C:/Users/write/Downloads/MIPS_Project/syn/MIPS_Processor.v:254]
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/write/Downloads/MIPS_Project/syn/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 1274.199 ; gain = 762.090
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1120.016 ; gain = 604.715
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1120.016 ; gain = 604.715
----------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'dout_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:216]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[15]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[14]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[13]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[12]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[11]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[10]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[9]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[8]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[7]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[6]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[5]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[4]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[3]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[2]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[1]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'data_mem_reg[0]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:203]
-WARNING: [Synth 8-327] inferring latch for variable 'IR_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'stop_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[31]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[30]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[29]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[28]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[27]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[26]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[25]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[24]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[23]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[22]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[21]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[20]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[19]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[18]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[17]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[16]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[15]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[14]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[13]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[12]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[11]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[10]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[9]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[8]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[7]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[6]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[5]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[4]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[3]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[2]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[1]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'GPR_reg[0]' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_reg_rep' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:446]
-WARNING: [Synth 8-327] inferring latch for variable 'SGPR_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:95]
-WARNING: [Synth 8-327] inferring latch for variable 'jmp_flag_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:88]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:446]
-WARNING: [Synth 8-327] inferring latch for variable 'carry_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:232]
-WARNING: [Synth 8-327] inferring latch for variable 'sign_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:239]
-WARNING: [Synth 8-327] inferring latch for variable 'zero_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:246]
-WARNING: [Synth 8-327] inferring latch for variable 'overflow_reg' [C:/Users/write/Downloads/MIPS_Project/syn/mips_cpu/MIPS_Processor.v:254]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1272.879 ; gain = 757.578
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -383,7 +365,7 @@ INFO: [Synth 8-3886] merging instance 'data_mem_reg[14][5]' (LD) to 'data_mem_re
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:01:11 . Memory (MB): peak = 1272.879 ; gain = 757.578
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:40 . Memory (MB): peak = 1274.199 ; gain = 762.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -405,7 +387,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:01:12 . Memory (MB): peak = 1290.660 ; gain = 775.359
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:41 . Memory (MB): peak = 1292.770 ; gain = 780.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -513,7 +495,7 @@ WARNING: [Synth 8-3332] Sequential element (GPR_reg[5][15]) is unused and will b
 WARNING: [Synth 8-3332] Sequential element (GPR_reg[5][14]) is unused and will be removed from module top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:01:12 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:41 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -531,37 +513,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -587,25 +569,24 @@ Report Instance Areas:
 |1     |top      |       |    16|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1292.918 ; gain = 780.809
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 580 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:16 . Memory (MB): peak = 1290.859 ; gain = 775.559
+Synthesis finished with 0 errors, 0 critical warnings and 580 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:51 . Memory (MB): peak = 1292.918 ; gain = 780.809
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:01:51 . Memory (MB): peak = 1292.918 ; gain = 780.809
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1302.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1304.762 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.980 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 199c898
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 261 Warnings, 1 Critical Warnings and 0 Errors encountered.
+127 Infos, 261 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1351.418 ; gain = 847.938
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/write/Downloads/MIPS_Project/syn/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:54 . Memory (MB): peak = 1345.980 ; gain = 842.758
+INFO: [Common 17-1381] The checkpoint 'C:/Users/write/Downloads/MIPS_Project/syn/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 21:06:46 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  6 13:36:37 2023...
