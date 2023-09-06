@@ -7,9 +7,9 @@ This project implements a 32-bit MIPS processor in Verilog HDL targeting the Xil
 ![MIPS CPU Architecture](https://github.com/mo-faruque/MIPS_Processor/blob/main/docs/cpu_block.png)
 
 - 32-bit pipelined processor
-- Separate 16-bit instruction and data memories (Harvard architecture) 
+- Separate 32-bit instruction and 16-bit data memories (Harvard architecture) 
 - 32 x 16-bit general purpose registers
-- 16-bit program counter
+- 32-bit program counter
 
 ## Instruction Set 
 
